@@ -1,0 +1,121 @@
+{
+  "id": "tech_showcase",
+  "name": "科技展示",
+  "description": "适合科技产品和数据展示的模板",
+  "category": "科技",
+  "author": "AI Animation Studio",
+  "version": "1.0",
+  "tags": [
+    "科技",
+    "数据",
+    "现代"
+  ],
+  "config": {
+    "duration": 45.0,
+    "fps": 30,
+    "resolution": {
+      "width": 1920,
+      "height": 1080
+    },
+    "background": {
+      "type": "solid",
+      "color": "#0a0a0a"
+    }
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "tech_title",
+      "content": "科技标题",
+      "style": {
+        "fontSize": "56px",
+        "fontWeight": "300",
+        "color": "#00ff00",
+        "fontFamily": "monospace",
+        "textShadow": "0 0 20px #00ff00"
+      },
+      "position": {
+        "x": 960,
+        "y": 200
+      }
+    },
+    {
+      "type": "shape",
+      "id": "grid_bg",
+      "shape": "grid",
+      "style": {
+        "stroke": "#333333",
+        "strokeWidth": 1,
+        "opacity": 0.3
+      },
+      "size": {
+        "width": 1920,
+        "height": 1080
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": "boot",
+      "name": "启动",
+      "start_time": 0.0,
+      "duration": 3.0,
+      "description": "系统启动动画"
+    },
+    {
+      "id": "data_load",
+      "name": "数据加载",
+      "start_time": 3.0,
+      "duration": 15.0,
+      "description": "数据加载和展示"
+    },
+    {
+      "id": "analysis",
+      "name": "分析",
+      "start_time": 18.0,
+      "duration": 20.0,
+      "description": "数据分析展示"
+    },
+    {
+      "id": "result",
+      "name": "结果",
+      "start_time": 38.0,
+      "duration": 7.0,
+      "description": "结果展示"
+    }
+  ],
+  "styles": {
+    "primary_color": "#00ff00",
+    "secondary_color": "#0066ff",
+    "background_color": "#0a0a0a",
+    "grid_color": "#333333"
+  },
+  "animations": {
+    "matrix_effect": {
+      "type": "custom",
+      "name": "matrix_rain",
+      "duration": 2.0
+    },
+    "glow_pulse": {
+      "type": "filter",
+      "property": "drop-shadow",
+      "keyframes": [
+        {
+          "time": 0,
+          "value": "0 0 5px #00ff00"
+        },
+        {
+          "time": 0.5,
+          "value": "0 0 20px #00ff00"
+        },
+        {
+          "time": 1,
+          "value": "0 0 5px #00ff00"
+        }
+      ],
+      "duration": 2.0,
+      "iteration": "infinite"
+    }
+  },
+  "created_time": "2025-07-30T21:31:11.647506"
+}

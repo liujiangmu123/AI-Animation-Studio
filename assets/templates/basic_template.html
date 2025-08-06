@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Animation Studio - 基础模板</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .animated-element {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            position: absolute;
+            transform-origin: center;
+        }
+        
+        .text-element {
+            font-size: 2em;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-weight: bold;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-element" id="title">AI Animation Studio</div>
+        <div class="animated-element" id="ball"></div>
+    </div>
+
+    <script>
+        // 动画控制函数 - 必须实现
+        function renderAtTime(t) {
+            const duration = 5.0; // 动画总时长5秒
+            const progress = Math.min(t / duration, 1.0);
+            
+            // 获取元素
+            const ball = document.getElementById('ball');
+            const title = document.getElementById('title');
+            
+            if (!ball || !title) return;
+            
+            // 小球动画：从左到右移动并旋转
+            const startX = -100;
+            const endX = window.innerWidth - 100;
+            const currentX = startX + (endX - startX) * progress;
+            const rotation = progress * 360;
+            
+            ball.style.transform = `translateX(${currentX}px) rotate(${rotation}deg)`;
+            
+            // 标题动画：淡入和缩放
+            const opacity = Math.min(progress * 2, 1);
+            const scale = 0.5 + progress * 0.5;
+            
+            title.style.opacity = opacity;
+            title.style.transform = `translateX(-50%) scale(${scale})`;
+            
+            // 背景色变化
+            const hue = progress * 60; // 从蓝色到绿色
+            document.body.style.background = `linear-gradient(135deg, hsl(${240 + hue}, 70%, 60%) 0%, hsl(${280 + hue}, 70%, 50%) 100%)`;
+        }
+        
+        // 将控制函数挂载到window对象
+        window.renderAtTime = renderAtTime;
+        
+        // 初始化动画状态
+        renderAtTime(0);
+        
+        console.log('✅ 基础模板加载完成，renderAtTime函数已就绪');
+    </script>
+</body>
+</html>

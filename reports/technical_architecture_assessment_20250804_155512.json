@@ -1,0 +1,71 @@
+{
+  "analysis_date": "2025-08-04T15:55:10.242066",
+  "overall_assessment": {
+    "overall_architecture_score": 0.425,
+    "overall_architecture_quality": "basic"
+  },
+  "four_dimensions": {
+    "code_structure_quality": "good",
+    "extensibility_quality": "good",
+    "stability_quality": "poor",
+    "performance_quality": "poor"
+  },
+  "code_structure_metrics": {
+    "total_files": 173,
+    "total_lines": 118937,
+    "total_classes": 522,
+    "total_functions": 4224,
+    "average_file_size": 687.4971098265896,
+    "documentation_coverage": 0.9180362410450906,
+    "type_annotation_coverage": 0.5305397727272727,
+    "code_duplication_rate": 0.3175083156939824
+  },
+  "extensibility_metrics": {
+    "interface_abstraction_score": 0.06423034330011074,
+    "plugin_architecture_score": 0.6,
+    "configuration_flexibility_score": 0.8,
+    "api_design_score": 1.0,
+    "dependency_injection_score": 1.0,
+    "modular_design_score": 0.3312138728323699
+  },
+  "stability_metrics": {
+    "error_handling_coverage": 0.4064816776106757,
+    "exception_safety_score": 0.30520231213872895,
+    "resource_management_score": 0.3057803468208092,
+    "thread_safety_score": 0.023699421965317918,
+    "memory_safety_score": 0.7150289017341055,
+    "graceful_degradation_score": 0.3040462427745665
+  },
+  "performance_metrics": {
+    "startup_time_score": 0.2,
+    "memory_efficiency_score": 0.5427745664739886,
+    "cpu_efficiency_score": 0.5173410404624277,
+    "io_efficiency_score": 0.5225433526011563,
+    "algorithm_complexity_score": 0.0,
+    "caching_strategy_score": 1.0,
+    "async_programming_score": 0.017341040462427744
+  },
+  "key_findings": {
+    "architecture_strengths": [],
+    "architecture_weaknesses": [
+      "系统稳定性问题严重，错误处理不足"
+    ],
+    "performance_bottlenecks": [
+      "性能问题严重，需要立即优化"
+    ],
+    "scalability_concerns": [],
+    "security_issues": []
+  },
+  "recommendations": {
+    "immediate_actions": [
+      "立即进行架构重构，解决关键质量问题",
+      "完善错误处理机制，提升系统稳定性"
+    ],
+    "short_term_improvements": [
+      "改进模块化设计，降低耦合度"
+    ],
+    "long_term_optimizations": [
+      "引入异步编程，提升并发性能"
+    ]
+  }
+}

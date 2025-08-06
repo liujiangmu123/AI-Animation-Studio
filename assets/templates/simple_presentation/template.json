@@ -1,0 +1,109 @@
+{
+  "id": "simple_presentation",
+  "name": "简单演示",
+  "description": "适合产品介绍和简单演示的模板",
+  "category": "演示",
+  "author": "AI Animation Studio",
+  "version": "1.0",
+  "tags": [
+    "简单",
+    "演示",
+    "产品"
+  ],
+  "config": {
+    "duration": 30.0,
+    "fps": 30,
+    "resolution": {
+      "width": 1920,
+      "height": 1080
+    },
+    "background": {
+      "type": "gradient",
+      "colors": [
+        "#667eea",
+        "#764ba2"
+      ]
+    }
+  },
+  "elements": [
+    {
+      "type": "text",
+      "id": "title",
+      "content": "产品标题",
+      "style": {
+        "fontSize": "48px",
+        "fontWeight": "bold",
+        "color": "#ffffff",
+        "textAlign": "center"
+      },
+      "position": {
+        "x": 960,
+        "y": 300
+      }
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "content": "产品副标题",
+      "style": {
+        "fontSize": "24px",
+        "color": "#f0f0f0",
+        "textAlign": "center"
+      },
+      "position": {
+        "x": 960,
+        "y": 400
+      }
+    }
+  ],
+  "segments": [
+    {
+      "id": "intro",
+      "name": "介绍",
+      "start_time": 0.0,
+      "duration": 5.0,
+      "description": "标题淡入"
+    },
+    {
+      "id": "content",
+      "name": "内容",
+      "start_time": 5.0,
+      "duration": 20.0,
+      "description": "主要内容展示"
+    },
+    {
+      "id": "outro",
+      "name": "结尾",
+      "start_time": 25.0,
+      "duration": 5.0,
+      "description": "结尾动画"
+    }
+  ],
+  "styles": {
+    "primary_color": "#667eea",
+    "secondary_color": "#764ba2",
+    "text_color": "#ffffff",
+    "accent_color": "#ffd700"
+  },
+  "animations": {
+    "fade_in": {
+      "type": "opacity",
+      "from": 0,
+      "to": 1,
+      "duration": 1.0,
+      "easing": "ease-in-out"
+    },
+    "slide_up": {
+      "type": "transform",
+      "from": {
+        "translateY": 50
+      },
+      "to": {
+        "translateY": 0
+      },
+      "duration": 0.8,
+      "easing": "ease-out"
+    }
+  },
+  "created_time": "2025-07-30T21:31:11.646208"
+}

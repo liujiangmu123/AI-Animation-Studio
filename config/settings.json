@@ -1,0 +1,66 @@
+{
+  "ui": {
+    "theme": "light",
+    "language": "zh_CN",
+    "window_width": 1200,
+    "window_height": 800,
+    "window_maximized": false,
+    "auto_save_interval": 300,
+    "show_welcome_dialog": true,
+    "enable_animations": true,
+    "font_size": 12,
+    "code_editor_theme": "default"
+  },
+  "solution": {
+    "auto_evaluate": true,
+    "auto_backup": true,
+    "backup_interval_hours": 24,
+    "max_solutions_cache": 1000,
+    "enable_version_control": true,
+    "default_tech_stack": "css_animation",
+    "quality_threshold": 0.6,
+    "enable_performance_hints": true
+  },
+  "recommendation": {
+    "enable_recommendations": true,
+    "recommendation_limit": 10,
+    "cache_expiry_hours": 1,
+    "track_user_behavior": true,
+    "personalization_level": 0.7,
+    "novelty_weight": 0.3,
+    "popularity_weight": 0.4,
+    "quality_weight": 0.3
+  },
+  "performance": {
+    "enable_auto_optimization": true,
+    "optimization_aggressiveness": 0.5,
+    "enable_compatibility_checks": true,
+    "target_browsers": [
+      "chrome",
+      "firefox",
+      "safari",
+      "edge"
+    ],
+    "performance_budget_ms": 16,
+    "enable_gpu_acceleration": true
+  },
+  "export": {
+    "default_format": "html",
+    "include_dependencies": true,
+    "minify_code": false,
+    "add_comments": true,
+    "export_directory": "exports",
+    "auto_open_exported": true,
+    "backup_before_export": true
+  },
+  "ai": {
+    "api_key": "",
+    "model_name": "gemini-pro",
+    "max_tokens": 2048,
+    "temperature": 0.7,
+    "enable_caching": true,
+    "cache_ttl_hours": 24,
+    "retry_attempts": 3,
+    "timeout_seconds": 30
+  }
+}
